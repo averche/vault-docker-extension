@@ -1,0 +1,19 @@
+{
+  "icon": "docker.svg",
+  "vm": {
+    "composefile": "docker-compose.yaml",
+    "exposes": {
+      "socket": "extension-vault-docker-extension1.sock"
+    }
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "Vault-Docker-Extension2",
+      "src": "index.html",
+      "root": "ui",
+      "backend": {
+        "socket": "extension-vault-docker-extension1.sock"
+      }
+    }
+  }
+}
