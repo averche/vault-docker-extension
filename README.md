@@ -4,5 +4,5 @@ Vault Docker Extension
 
 ## Preview
 
-![screenshot](!./screenshot.png)
+![screenshot](./screenshot.png)
 
