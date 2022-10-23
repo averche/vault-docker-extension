@@ -1,0 +1,13 @@
+services:
+  vault-docker-extension2:
+    image: ${DESKTOP_PLUGIN_IMAGE}
+
+  vault:
+    image: vault-dev:latest
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8201
+      VAULT_DEV_ROOT_TOKEN_ID:  root
+    ports:
+      - "8201:8201"
