@@ -37,8 +37,6 @@ func main() {
 	router := echo.New()
 	router.HideBanner = true
 
-	startURL := ""
-
 	ln, err := net.Listen("unix", socketPath)
 	if err != nil {
 		log.Fatal(err)
@@ -49,7 +47,7 @@ func main() {
 	router.GET("/get-secret", getSecret)
 	router.POST("/write-secret", writeSecret)
 
-	log.Fatal(router.Start(startURL))
+	log.Fatal(router.Start(""))
 }
 
 func getSecrets(ctx echo.Context) error {
